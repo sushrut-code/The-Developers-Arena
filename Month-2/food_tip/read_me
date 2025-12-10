@@ -1,0 +1,37 @@
+🍽️ Restaurant Tipping Analysis📌 
+Project Overview
+This project performs an Exploratory Data Analysis (EDA) on restaurant tipping data to understand customer tipping behavior.
+The goal is to identify factors that influence tip amounts, such as total bill size, party size, day of the week, and smoker status.
+📂 Dataset Overview
+The dataset contains 244 records of restaurant transactions with the following features:
+Total Bill: Cost of the meal (in dollars).
+Tip: Tip amount (in dollars).
+Sex: Gender of the payer (Male/Female).
+Smoker: Whether the party included smokers (Yes/No).
+Day: Day of the week (Thur, Fri, Sat, Sun).
+Time: Meal time (Lunch/Dinner).
+Size: Size of the party.
+Feature Engineering:
+tip_pct: Calculated as (tip / total_bill) * 100.
+bill_per_head: Calculated as total_bill / size.
+🔍 Key Insights & Conclusions1. 
+📅 Busiest Days & TimesSaturday is the busiest day for the restaurant, followed by Sunday.
+Dinner service is significantly more popular than Lunch, with the majority of transactions occurring in the evening.
+2. 💰 Spending Habits
+Highest Average Bill: Sunday Dinners have the highest average total bill ($21.41).
+Lowest Average Bill: Friday Lunches have the lowest average total bill ($12.85).
+Correlation: There is a strong positive correlation (0.67) between total_bill and tip. As the bill amount increases, the tip amount generally increases.
+3. 💸 Tipping Behavior
+Best Tippers (Percentage): Surprisingly, customers dining on Friday Lunch tend to leave the highest percentage tips (average 18.8%)
+Worst Tippers (Percentage): Saturday Dinner crowds leave the lowest percentage tips (average 15.3%).
+Bill Size vs. Tip %: There is a weak negative correlation (-0.33) between total_bill and tip_pct. This suggests that as the total bill gets larger, the percentage people tip tends to decrease slightly.
+4. 🚬 Customer Demographics
+Smokers: Saturday attracts the highest volume of smokers (42 tables), whereas Sunday has relatively few smokers compared to non-smokers.
+Group Size: The largest average group sizes are seen during Sunday Dinner (avg 2.84 people).
+📊 Statistical Analysis (Correlation Matrix)A correlation analysis was performed on the numerical features:
+Observation: Party size is positively correlated with the bill amount (0.59), which is expected.
+🛠️ Technologies Used
+Python Pandas (Data Manipulation)Matplotlib & Seaborn (Data Visualization)🚀 
+How to RunClone this repository.
+Ensure tips.csv is in the working directory.
+Run the Jupyter Notebook
