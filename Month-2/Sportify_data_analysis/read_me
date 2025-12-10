@@ -1,0 +1,22 @@
+🎵 Spotify Data Analysis -
+Key Findings
+This project explores a dataset of Spotify tracks to identify factors that influence popularity, analyze trends over time, and determine the impact of explicit content on song success.
+📊 1. Data OverviewDataset 
+  Size: 8,778 tracks with 15 features including popularity, duration, artist metadata, and explicit content flags.
+  Data Cleaning:Handled missing values for track names, artist names, and genre data.Converted track duration from milliseconds to minutes for better readability.
+  Standardized artist follower counts into millions.Extracted release years from date fields to analyze temporal trends.
+📈 2. Exploratory Analysis InsightsPopularity DriversArtist 
+  Influence: There is a moderate positive correlation (~0.46) between Artist Popularity and Track Popularity. 
+  This suggests that while an artist's fame helps, the specific song's appeal is still a major factor.
+  Track Duration: The analysis tracks the average song duration over the years, visualizing how industry standards for song length have evolved (typically showing a trend towards shorter songs in the streaming era).
+  Content TrendsExplicit vs. Clean:The analysis identified the top artists producing explicit content.It also highlighted specific years where explicit content releases peaked, showing shifts in musical norms over time.
+  Prolific Artists: Identified artists with the highest volume of tracks in the dataset, which helps distinguish between "viral hits" and consistent output.
+  🧪 3. Statistical Hypothesis TestingA core part of this analysis was determining if explicit content affects a song's popularity.
+  Test Performed: Independent T-TestHypothesis:$H_0$: There is no difference in popularity between explicit and non-explicit (clean) songs.$H_1$: There is a significant difference in popularity.Results:T-statistic: 12.18P-value: 0.00000 ( < 0.05 )
+  Conclusion: The extremely low P-value allows us to reject the null hypothesis.
+  Finding: There is a statistically significant difference in popularity between explicit and clean songs.
+  Interpretation: Given the positive T-statistic (comparing Explicit vs. Clean), the data suggests that explicit songs tend to have higher popularity scores on average in this dataset compared to non-explicit ones.
+  📝 Recommendations & Next StepsFor Artists: While explicit content correlates with higher popularity, it is likely confounded by genre (e.g., Hip-Hop/Rap being popular and often explicit). 
+  Further segmentation by genre is recommended.
+  Feature Engineering: The current moderate correlation (0.46) suggests other features (like danceability, energy, or tempo, if available) could better explain popularity variance.
+  🖥️ How to Use This AnalysisTo replicate these findings:Ensure track_data_final.csv is in the root directory.Run the Jupyter Notebook spotify.ipynb.The notebook handles all cleaning, visualization, and statistical testing automatically.
