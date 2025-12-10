@@ -1,0 +1,69 @@
+🩺 Kidney Function & CKD Analysis
+📌 Project Overview
+This project performs an Exploratory Data Analysis (EDA) on a healthcare dataset to understand the risk factors and biomarkers associated with Chronic Kidney Disease (CKD). The analysis focuses on identifying key physiological indicators (like Creatinine, BUN, GFR) and comorbidities (Diabetes, Hypertension) that distinguish CKD patients from healthy individuals.
+
+📂 Dataset Overview
+The dataset contains 5,000 patient records with 11 health indicators:
+
+Biomarkers: Creatinine, BUN (Blood Urea Nitrogen), GFR (Glomerular Filtration Rate), Protein in Urine.
+
+Lifestyle/Physiological: Urine Output, Water Intake, Age.
+
+Conditions: Diabetes, Hypertension.
+
+Target Variable: CKD_Status (1 = Has CKD, 0 = No CKD).
+
+Medication: Types of medication taken (handled for missing values).
+
+Data Cleaning:
+
+Missing Values: The Medication column had ~60% missing data (2987 rows), which was imputed with "None".
+
+Feature Engineering: Converted Urine_Output (ml) to Urine_Output_in_liters for better readability.
+
+🔍 Key Insights & Conclusions
+1. 🩸 Critical Biomarkers for CKD
+The analysis reveals distinct differences in blood markers between CKD and non-CKD patients:
+
+Creatinine: CKD patients exhibit significantly higher creatinine levels compared to healthy individuals. (Higher levels indicate worse kidney function).
+
+BUN (Blood Urea Nitrogen): Similarly, BUN levels are elevated in CKD patients, indicating impaired nitrogen clearance.
+
+GFR (Glomerular Filtration Rate): There is a strong inverse relationship; CKD patients have much lower GFR values, directly reflecting reduced kidney filtration capability.
+
+Protein in Urine: Higher levels of protein in urine are observed in the CKD group, a common sign of kidney damage.
+
+2. ⚠️ Comorbidities (Risk Factors)
+The analysis highlights the strong link between systemic health conditions and kidney disease:
+
+Diabetes: A significant portion of CKD patients also suffer from Diabetes.
+
+Hypertension: High blood pressure is highly prevalent among the CKD population.
+
+Double Burden: The analysis isolates a specific high-risk subgroup of patients who suffer from both Diabetes and Hypertension alongside CKD.
+
+3. 💊 Medication & Lifestyle
+Medication: The dataset tracks various medications. A specific analysis was run to see the distribution of drugs prescribed specifically to CKD patients vs. the general population.
+
+Age: Age distribution analysis (via Boxplots and KDE) helps determine if CKD is skewed towards older demographics in this dataset.
+
+📊 Statistical Analysis
+A Correlation Matrix was generated to quantify relationships between variables. Key expected correlations include:
+
+Negative Correlation: GFR vs. Creatinine (as one goes up, the other goes down).
+
+Positive Correlation: Diabetes/Hypertension vs. CKD Status.
+
+🛠️ Technologies Used
+Python
+
+Pandas (Data Manipulation & Cleaning)
+
+Matplotlib & Seaborn (Visualization: Boxplots, Countplots, Heatmaps, KDE)
+
+🚀 How to Run
+Clone this repository.
+
+Ensure kidney_dataset.csv is in the working directory.
+
+Run the Jupyter Notebook:
