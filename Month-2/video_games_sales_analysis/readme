@@ -1,0 +1,71 @@
+🎮 Video Games Sales & Ratings Analysis
+📌 Project Overview
+This project performs an Exploratory Data Analysis (EDA) on a massive dataset of video games to uncover trends in sales, platform popularity, and the relationship between critic scores and commercial success.
+
+📂 Dataset Overview
+The dataset contains 64,016 records of video games with the following attributes:
+
+Game Info: title, console (platform), genre, publisher, developer, release_date.
+
+Performance Metrics:
+
+critic_score: Aggregate score from critics.
+
+total_sales(mil): Total global sales in millions.
+
+Regional Sales (in millions):
+
+na_sales(mil): North America.
+
+jp_sales(mil): Japan.
+
+pal_sales(mil): Europe/Africa (PAL region).
+
+other_sales(mil): Other regions.
+
+Data Cleaning:
+
+Date Parsing: Converted release_date to datetime objects to enable time-series analysis.
+
+Missing Values: The dataset originally contained significant missing data (e.g., ~57k missing critic scores, ~45k missing sales figures). These were handled (likely imputed or filled) to ensure statistical models and plots could run without errors, resulting in a clean dataset with 0 null values for the final analysis.
+
+🔍 Key Insights & Analysis
+1. 📊 Correlation Analysis
+A correlation heatmap was generated to understand relationships between numerical variables. Key relationships typically explored in this domain include:
+
+Critic Score vs. Sales: Investigating if higher critical acclaim actually leads to higher sales numbers.
+
+Regional Correlations: Analyzing if success in North America (na_sales) correlates strongly with success in Europe (pal_sales) or Japan (jp_sales).
+
+2. 🕹️ Platform (Console) Popularity
+Distribution: A count plot was generated to visualize the number of games released per console (PS3, PS4, X360, etc.).
+
+Insight: This highlights which consoles have the largest libraries and market presence over the dataset's timeframe.
+
+3. 📈 Regional Sales Trends
+The dataset breaks down sales by region, allowing for comparison of market preferences:
+
+NA vs. JP vs. PAL: Identifying which genres or consoles perform better in specific parts of the world (e.g., JRPGs in Japan vs. Shooters in North America).
+
+📊 Visualizations Generated
+The notebook includes the following visualizations to communicate insights:
+
+Correlation Heatmap: To visualize the strength of relationships between sales figures and scores.
+
+Pairplot: A comprehensive grid of scatterplots to visualize pairwise relationships across all numerical variables.
+
+Console Countplot: A bar chart showing the frequency of games across different gaming platforms.
+
+🛠️ Technologies Used
+Python
+
+Pandas (Data Cleaning & Manipulation)
+
+Matplotlib & Seaborn (Statistical Data Visualization)
+
+🚀 How to Run
+Clone this repository.
+
+Ensure VideoGames_Sales.xlsx is in the working directory.
+
+Run the Jupyter Notebook:
