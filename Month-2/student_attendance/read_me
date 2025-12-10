@@ -1,0 +1,35 @@
+📚 Student Attendance Analysis & Prediction
+📌 Project Overview
+This project performs an in-depth Exploratory Data Analysis (EDA) and statistical testing on a student dataset to identify the key drivers of class attendance.
+The goal is to understand how factors like demographics, study habits, weather, and logistics influence whether a student attends class.
+📂 Dataset Overview
+The dataset consists of 20,000 student records with 15 features, including:
+Demographics: age, gender, parent_education.
+Academic: course, year, study_hours, attendance (Target: 0 or 1).
+Logistics & Environment: travel_time_minutes, hostel_resident, internet_access, class_type (Online/Offline), weather.
+Health: sleep_hours.
+Data Quality:The dataset is clean with no missing values and no duplicate rows.
+🔍 Key Insights & Conclusions1. 📖 Study Habits & Attendance
+Strong Correlation: There is a highly significant relationship between the number of hours a student studies and their attendance.
+Statistical Proof: An Independent T-Test yielded a P-value of ~1.03e-182, overwhelmingly rejecting the null hypothesis.
+This confirms that students who attend class tend to have significantly different (likely higher) study hours than those who do not.
+2. ⛈️ The Impact of Weather & Class TypeWeather Matters: Weather conditions significantly impact attendance rates.
+Interaction Effect: The analysis highlights a critical interaction between weather and class_type.
+Adverse weather (e.g., rain, storms) disproportionately affects Offline class attendance, while Online class attendance remains relatively stable.
+Statistical Proof: A Chi-Square test between weather and attendance resulted in a P-value of ~6.60e-43, confirming that the dependency is statistically significant.
+3. 🚌 Logistics: Travel & ResidenceTravel Time: Students with longer travel times generally show lower attendance or more variance in attendance, as visualized in the violin plots.
+Hostel Residents: Analysis suggests that students living in hostels (closer to campus) likely have different attendance patterns compared to day scholars, often showing higher stability.
+4. 💻 InfrastructureInternet Access: Students with internet access tend to have slightly better attendance rates, likely facilitating participation in online classes.
+📊 Statistical Analysis Summary
+Hypothesis TestVariables 
+ComparedP-ValueResultT-TestStudy Hours vs. Attendance1.03e-182
+Significant Difference (Study habits drive attendance)Chi-SquareWeather vs. Attendance
+6.60e-43
+Significant Dependency (Weather impacts attendance)
+🛠️ Technologies Used
+PythonPandas (Data Manipulation)
+Matplotlib & Seaborn (Data Visualization)
+SciPy (Statistical Hypothesis Testing)
+🚀 How to RunClone this repository.
+Ensure Attendance_Prediction.csv is in the working directory.
+Run the Jupyter Notebook:
